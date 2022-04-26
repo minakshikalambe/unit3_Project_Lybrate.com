@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Weight Management Products Online At Best Prices In India | Lybrate</title>
+    <link rel="icon" sizes="192*192" href="https://nu.lybcdn.com/img/push-crew/logo_192_by_192.png">
+    <link rel="stylesheet" href="/styles/categoryPages.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="/styles/slider.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/styles/footer.css">
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+
+        </header>
+        <div id="slider">
+
+        </div>
+        <div id="secondNav">
+            
+
+        </div>
+        <div id="content">
+            <!-- <div class="cardItem">
+                <div class="priceImageDiv">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/gangakshi/updt/g_cordial_v1.png"
+                        alt="">
+                    <div>
+                        <p>Gangakshi G Cordial Vedic Syrup 200ml</p>
+                        <div class="priceDiv">
+                            <p>₹160.00</p>
+                            <p>₹200.00</p>
+                        </div>
+                    </div>
+                </div>
+                <button>Add to Cart</button>
+            </div>-->
+
+
+
+        </div>
+
+
+
+
+
+        <div id="wellnessInfo">
+
+        </div>
+
+
+
+    </div>
+    <footer class="footer" id="footer"></footer>
+
+</body>
+
+</html>
+<script type="module">
+
+    import {goodkartHeader,slide,responsiveSlider} from "./components/goodkartHeaderAndSlider.js"
+
+import dropDown from "./scripts/dropDown.js";
+
+import secondNav from "./components/secondNavBar.js"
+import authenticate from "./scripts/loginauhentication.js";
+
+
+import {displayContent, sort} from "./scripts/categoryAppendSort.js"
+import footer from "./components/footer.js"
+    document.getElementById("footer").innerHTML=footer();
+
+var WeightManagement = [
+    {
+        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/navgrah/slim_up_v1.png",
+        name : "NavGrah Slim Up For Weight Loss - 30 Capsules",
+        des : "NavGrah Weight Management Capsule Slim Up helps not just to make you lose stubborn belly fat but also keeps you away from numerous lifestyle diseases. It also helps in boosting metabolism, removing water retention, flushing out toxins, improving digestion, stress reduction.",
+        price : 630.00,
+        strprice : 700.00,
+    },
+    {
+        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/navgrah/tone_up_v1.png",
+        name : "NavGrah Tone Up For Weight Loss - 30 Capsules",
+        des : "Excess belly fat is related to many serious health conditions including stroke, heart disease, obesity, diabetes, stroke and even some types of cancers. NavGrah Tone Up not only provides the interim solution to reduce weight but also helps cure the diseases caused by being overweight.",
+        price : 630.00,
+        strprice : 700.00,
+    },
+        {
+        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/711_PD_Image1.jpg",
+        name : "Farm Naturelle Organic Apple Cider Vinegar with Ginger and Turmeric - 500ml",
+        des : "Apple cider Vinegar by Farm Naturelle is 100% natural, unpasteurised and unfiltered. It has multiple health benefits.",
+        price : 500.00,
+        strprice : 625.00,
+    },
+    {
+        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/purenutri/prod_2021-04-22/applecider-v1.webp",
+        name : "Apple Cider Vinegar Plus 90 Tablets",
+        des : "t is the 100% vegetarian supplements made from the finest quality and organic apples providing 300mg of all-natural apple cider vinegar powder along with other natural ingredients that give a natural boost to your health with taste",
+        price : 760.00,
+        strprice : 1199.00,
+    },
+        {
+        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/1604_PD_Image1.jpg",
+        name : "Lipoherb: Ayurvedic Medicine for Weight Loss & Cholesterol – (Pack of 3)",
+        des : "Dr Vaidya’s Lipoherb is 100% natural medicine to aid in healthy weight loss and management of cholesterol levels.",
+        price : 450.00,
+        strprice : 540.00,
+    },
+    {
+        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/760_PD_Image1.jpg",
+        name : "Farm Naturelle Organic Apple Cider Vinegar with Cinnamon and Fenugreek - 500ml",
+        des : "Apple cider Vinegar by Farm Naturelle is 100% natural, unpasteurised and unfiltered. It maintains blood pressure and helps in weight loss.",
+        price : 480.00,
+        strprice : 625.00,
+    },
+    {
+        image : "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/1605_PD_Image1.jpg",
+        name : "Lipoherb: Ayurvedic Medicine for Weight Loss & Cholesterol – (Pack of 3 x 2)",
+        des : "Dr Vaidya’s Lipoherb is 100% natural medicine to aid in healthy weight loss and management of cholesterol levels.",
+        price : 800.00,
+        strprice : 1080.00,
+    },
+]
+
+
+
+let header = document.getElementById("header");
+
+header.innerHTML = goodkartHeader();
+
+dropDown();
+
+
+let sliderArr = [{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Gold-membership-web.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/Lybrate_Covid-Care_Banner_1200x250_05-05-2021.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Swan-gold-offer-web.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Herbo-Turbo_Banner_1200x250_18-11-2021.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Turmeric-Powder-1200x250.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/BCAA-1200x250.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Bio-Ortho-1200x250.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Swan-Banner_NavGrah-Vigor-Up_1200x250_20-01-2022.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Swan-Banner_NavGrah-Slim-Up_1200x250_20-01-2022.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Masala-chai-1200x250.jpg"
+},
+];
+
+let slide_div = document.getElementById("slider")
+
+slide(slide_div,sliderArr);
+
+responsiveSlider();
+
+
+
+document.getElementById("secondNav").innerHTML = secondNav("Weight Management");
+
+document.getElementById("low").addEventListener("click", function(){
+    sort("low", WeightManagement,content)
+})
+
+document.getElementById("high").addEventListener("click", function(){
+    sort("high",WeightManagement,content)
+})
+
+document.getElementById("popular").addEventListener("click", function(){
+    sort("p",WeightManagement,content)
+})
+
+
+// document.getElementById("wellnessInfo").innerHTML = wellnessInfo();
+
+
+
+    
+
+
+    let content = document.getElementById("content");
+
+    
+    displayContent(WeightManagement,content);
+
+    
+
+    authenticate();
+</script>

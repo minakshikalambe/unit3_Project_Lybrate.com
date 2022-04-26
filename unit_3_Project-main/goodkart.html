@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoodKart - Buy Health Care Products Online at Best Prices in India | Lybrate</title>
+    <link rel="icon" sizes="192*192" href="https://nu.lybcdn.com/img/push-crew/logo_192_by_192.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="/styles/goodkart.css">
+    <link rel="stylesheet" href="/styles/header.css">
+    <link rel="stylesheet" href="/styles/slider.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+</head>
+
+
+<body>
+    <div id="container">
+
+        <!-- Header Start -->
+
+        <header id="header">
+
+        </header>
+
+        <!-- Header End -->
+
+
+        <!-- Slider Start -->
+
+        <div id="slider">
+
+        </div>
+
+
+        <!-- Slider End -->
+
+
+        <!-- content i.e. e-commerce items appended in the content div-->
+
+        <div id="content">
+            <div id="goldBox">
+                <div>Exclusively for <b>gold</b> Members</div>
+                <div id="item">
+                    <div>
+                        <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_rgb:ffffff/rio/drvaidyas/dvmp/Rumox1.jpg"
+                            alt="">
+                        <p>Muscle & Joint Pain Relief Balm</p>
+                        <div class="priceBox">
+                            <p>₹1</p>
+                            <s>₹125</s>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_rgb:ffffff/rio/800x800/Herbocool.webp"
+                            alt="">
+                        <p>Herbocool: Ayurvedic Hair Oil</p>
+                        <div class="priceBox">
+                            <p>₹1</p>
+                            <s>₹200</s>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="protein">
+                <div>Best In Protein & Fitness - Your Workout Buddies</div>
+                <div class="best">
+                    <div>
+                        <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_rgb:ffffff/rio/drvaidyas/dvmp/Rumox1.jpg"
+                            alt="">
+                        <p>Muscle & Joint Pain Relief Balm</p>
+                        <div class="pr">
+                            <p>₹1</p>
+                            <s>₹125</s>
+                            <button>add to vart</button>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_rgb:ffffff/rio/drvaidyas/dvmp/Rumox1.jpg"
+                            alt="">
+                        <p>Muscle & Joint Pain Relief Balm</p>
+                        <div class="pr">
+                            <p>₹1</p>
+                            <s>₹125</s>
+                            <button>add to vart</button>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_rgb:ffffff/rio/drvaidyas/dvmp/Rumox1.jpg"
+                            alt="">
+                        <p>Muscle & Joint Pain Relief Balm</p>
+                        <div class="pr">
+                            <p>₹1</p>
+                            <s>₹125</s>
+                            <button>add to vart</button>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_rgb:ffffff/rio/drvaidyas/dvmp/Rumox1.jpg"
+                            alt="">
+                        <p>Muscle & Joint Pain Relief Balm</p>
+                        <div class="pr">
+                            <p>₹1</p>
+                            <s>₹125</s>
+                            <button>add to vart</button>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+           
+            <div class="card">
+                <img src="https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/product_banner_01.jpg" alt="">
+            </div>
+            <div class="card"><img src="https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner-COVID-19-Protection-Kit_01.jpg" alt=""></div>
+            <div class="card"><img src="https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Fitness-Supplement-Products_02.jpg" alt=""></div> -->
+
+
+        </div>
+
+
+        <!-- information paragraph starts -->
+        <div id="info">
+
+
+        </div>
+        <!-- information paragraph ends -->
+
+        <!-- Footer starts -->
+
+       
+
+
+
+
+
+
+    </div>
+    <footer class="footer" id="footer"></footer>
+
+
+</body>
+
+</html>
+<script type="module">
+   
+   import footer from "./components/footer.js"
+    document.getElementById("footer").innerHTML=footer();
+ import goodKartInfo from "./components/goodKartInfo.js";
+
+import {goodkartHeader,  slide, responsiveSlider} from "./components/goodkartHeaderAndSlider.js";
+
+import dropDown from "./scripts/dropDown.js";
+
+import authenticate from "./scripts/loginauhentication.js";
+
+
+let cartArr=JSON.parse(localStorage.getItem("cartArr"))||[];
+
+
+
+document.getElementById("info").innerHTML=goodKartInfo();
+
+
+let header = document.getElementById("header");
+
+header.innerHTML = goodkartHeader();
+let cartdiv=document.getElementById("cartdiv");
+console.log(cartArr.length)
+let cartsize=document.createElement("div");
+cartsize.id="cartsize";
+cartsize.textContent=`${cartArr.length}`
+cartdiv.append(cartsize)
+
+dropDown();
+
+authenticate();
+// console.log(authenticate())
+
+
+
+
+
+
+
+
+let sliderArr = [{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Gold-membership-web.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/Lybrate_Covid-Care_Banner_1200x250_05-05-2021.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Swan-gold-offer-web.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Herbo-Turbo_Banner_1200x250_18-11-2021.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Turmeric-Powder-1200x250.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/BCAA-1200x250.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Bio-Ortho-1200x250.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Swan-Banner_NavGrah-Vigor-Up_1200x250_20-01-2022.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Swan-Banner_NavGrah-Slim-Up_1200x250_20-01-2022.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Masala-chai-1200x250.jpg"
+},
+];
+
+let slide_div = document.getElementById("slider")
+
+slide(slide_div,sliderArr);
+
+responsiveSlider();
+
+let mainArr = [
+    {
+        title: "Best In Protein & Fitness - Your Workout Buddies",
+        arr: [
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/resized/resizednew/resizednew/TestosteroneBoosterSupplement1.jpg",
+                name: "Enhances Energy, Focus & Strength",
+                price: "598",
+                stprice: "1000 ",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/onelife/lot2/raw_whey_v1.png",
+                name: "Onelife Raw Whey Protein (Imported Whey Protein Concentrate) 1kg",
+                price: "1249",
+                stprice: "2499",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/ritebite/fruits_seeds_bar_v1.png",
+                name: "RiteBite Fruits and Seeds Bar (Nutrition Bar) 35g",
+                price: "34",
+                stprice: "40",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white//rio/800x800/Testestrone_Pack_2.jpg",
+                name: "Enhances Energy, Focus & Strength",
+                price: "1100",
+                stprice: "2000",
+            }
+        ]
+    },
+    {
+    title: "New Arrival in Kart | Check Now",
+        arr: [
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/lupin/lupin_beone_pack.png",
+                name: "Lupin Life Be One 10 Capsules - Pack of 5",
+                price: "550",
+                stprice: "775",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/lupin/lupisafe500_pack.png",
+                name: "Lupin Lupisafe Hand Sanitizer 500ml Pack of 3",
+                price: "700",
+                stprice: "885",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/onelife/lot2/coconutoil500_v1.png",
+                name: "Onelife Organic Cold Pressed Virgin Coconut Oil 500ml",
+                price: "723",
+                stprice: "850",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/powergummies/beach_body_v1.png",
+                name: "Power Gummies The Beach Body (Gummies for Weight Management) - 60 Gummies",
+                price: "900",
+                stprice: "1200",
+            },
+            
+        ]
+    },
+    {
+        title: "Money Saving Deals",
+        arr: [
+
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/welark/product_2021-07-14/testobooster_v1.png",
+                name: "Wel Ark Testo Booster 60 capsules",
+                price: "1499",
+                stprice: "2500",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white//rio/800x800/Stemno_male_multi.jpg",
+                name:"Fulfill your everyday's vitamin needs" ,
+                price: "999",
+                stprice: "2000",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/800x800/Rasberry-1.webp",
+                name: "Kalon Raspberry Fruit Preserve Spread (No added Sugar) 290g",
+                price: "399.2",
+                stprice: "499",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/dnpl/insulatwin_v1.png",
+                name: "DNPL Insula Twin 30 Capsules",
+                price: "360",
+                stprice: "450",
+            }
+        ]
+    },
+    {
+        title:"Sexual Wellness Products - Feel The Pleasure" ,
+        arr: [
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/gangakshi/updt/g_force_pack.png",
+                name: "Gangakshi G Force Vedic 30 Capsules Pack of 3",
+                price: "622",
+                stprice: "840",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white//rio/800x800/Herbo_Buy_2_1.jpg",
+                name: "Live Life To The Fullest",
+                price: "1000",
+                stprice: "1500",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white//rio/800x800/Hurbo_male_multi.jpg",
+                name: "Fulfill your everyday's vitamin needs",
+                price: "700",
+                stprice: "1000",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/onelife/olmp_testofuel.jpg",
+                name: "Onelife Testo Fuel Testosterone Booster",
+                price: "599",
+                stprice: "1099",
+            }
+        ]
+    },
+    {
+        title: "Immunity Boosting Products - Boost Immunity",
+        arr: [
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/GoodLyfeProject/ashwagandha_pack.jpg",
+                name: "Ashwagandha Superoot Powder (Vegan & Gluten Free)",
+                price: "559",
+                stprice: "700",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/maharishiayurveda/mahp_ayur_defence_pack3.jpg",
+                name: "Ayur Defence AV 20 Tablet - Pack of 3",
+                price: "649",
+                stprice: "810",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/JIWO/immunity-booster.jpg",
+                name: "JIVO Immunity Booster",
+                price: "549",
+                stprice: "695",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/mahaguru/healthup_v1.png",
+                name: "NavGrah Health Up Immunity For Incurable Disease",
+                price:"585" ,
+                stprice: "650",
+            }
+        ]
+    },
+    {
+        title: "Best In Weight Management - Achieve Your Fitness Goals",
+        arr: [
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/powergummies/beach_body_v1.png",
+                name: "Power Gummies The Beach Body (Gummies for Weight Management) - 60 Gummies",
+                price: "900",
+                stprice: "1200",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/drvaidyas/dvmp/Lipoherb1.jpg",
+                name: "Ayurvedic Medicine for Weight Loss",
+                price: "800",
+                stprice: "1080",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/gangakshi/updt/fit_n_cure_pack.png",
+                name: "Gangakshi Fit N Cure Granules 80g Pack of 3",
+                price: "634",
+                stprice: "855",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/GoodLyfeProject/amla_pack.jpg",
+                name: "Amla Superberry Powder (Vegan and Gluten Free)",
+                price: "509",
+                stprice: "640",
+            },
+            
+
+        ]
+    },
+    {
+        title: "Best In Vitamins & Joint Care - Get Charged",
+        arr: [
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/mahaguru/fboostup_v1.png",
+                name:"NavGrah FBoost Up for Female Health ",
+                price: "540",
+                stprice: "600",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/healthvit/calvitan_new_pack.png",
+                name: "Healthvit Calvitan-D3 (Calcium and Vitamin D3 Tablets) 60 Tablets Pack of 3",
+                price: "737.5",
+                stprice: "1050",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/maharishiayurveda/2021-03-03/pirant_oil_pack.jpg",
+                name: "Pirant Oil For Joint Pain",
+                price: "549",
+                stprice: "680",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/onelife/olmp_bone_bliss.jpg",
+                name: "Onelife Bone Bliss",
+                price: "449",
+                stprice: "949",
+            }
+        ]
+    },
+    {
+        title: "Best In Tea & Coffee - Refresh Yourself",
+        arr: [
+        {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white//rio/800x800/ratri_200gms1_v10.jpg",
+                name: "Ratri Chai",
+                price: "600",
+                stprice: "700",
+            },{
+                img:"https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white//rio/800x800/masala_200gms1_v10.jpg",
+                name:"Masala Chai",
+                price:"600",
+                stprice:"735"
+            
+            },
+            {
+                img:"https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/namhya/lungs_cleanse_pack.png" ,
+                name: "Namhya Lung Cleanse Tea 100g Pack of 2",
+                price: "600",
+                stprice: "1178",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/namhya/thyroid_care_v1.png",
+                name: "Namhya Thyroid Care Tea 100g",
+                price:"549" ,
+                stprice: "589",
+            }
+        ]
+    },
+    {
+        title: "Best In Skin & Hair Care | Buy Now",
+        arr: [
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/drvaidyas/dvmp_herbocool_pack4.jpg",
+                name: "Herbocool (200 Ml) - Pack of 4",
+                price: "599",
+                stprice: "800",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/addveda/hair1.jpg",
+                name: "Add Veda Add Hair Capsule (60 Capsules)",
+                price: "1000",
+                stprice: "1200",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/farm_naturelle/others/neempatra1.jpg",
+                name: "Purifies Blood and Detoxifies the body",
+                price: "500",
+                stprice: "698",
+            },
+            {
+                img: "https://assets.lybrate.com/q_auto:low,f_auto,w_250,h_250,c_pad,b_white/rio/GoodLyfeProject/licorice_v1.png",
+                name:"Organic Licorice Powder 200g" ,
+                price: "256",
+                stprice: "320",
+            }
+        ]
+    }
+]
+
+
+
+
+
+
+let imageArr=[
+    [
+        {
+            img:"https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/product_banner_01.jpg"
+        },
+        {
+            img:"https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner-COVID-19-Protection-Kit_01.jpg"
+        },
+        {
+            img:"https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Fitness-Supplement-Products_02.jpg"
+        },
+    ],
+    [
+        {
+            img:"https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Top-Sexual-Wellness-Products_03.jpg"
+        },
+        {
+            img:"https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Top-Multivitamin-Products_04.jpg"
+        },
+        {
+            img:"https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Top-Face-Care-Product_05.jpg"
+        },
+    ],
+    [
+        {
+            img:"https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Top-Baby-Care-Products.jpg"
+        },
+        {
+            img:"https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Top-Food-Drink-Products_07.jpg"
+        },
+        {
+            img:"https://assets.lybrate.com/q_auto:low,f_auto,w_600//rio/800x800/banner_Top-Hair-Care-Products_8.jpg"
+        },
+    ],
+    
+]
+
+
+
+
+
+
+let j;
+for(let i=0; i<mainArr.length; i++){
+    let div = document.createElement("div");
+    div.setAttribute("class","contentBox");
+
+    let title = document.createElement("div");
+    title.innerText= mainArr[i].title;
+
+
+    let card = document.createElement("div");
+    card.setAttribute("class","itemsBox");
+
+    mainArr[i].arr.map((el)=>{
+
+        let div1= document.createElement("div");
+
+        let img = document.createElement("img");
+        img.src = el.img;
+
+        let name = document.createElement("p");
+        name.innerText = el.name;
+
+        let price_div = document.createElement("div");
+        price_div.setAttribute("class","priceBox");
+
+        let price =document.createElement("p");
+        price.innerText= `₹${el.price}`;
+        let stprice = document.createElement("s");
+        stprice.innerText= `₹${el.stprice}`;
+
+        let btn = document.createElement("button");
+            btn.innerText = "Add to Cart"
+            btn.addEventListener("click", ()=>{
+                addToCart(el);
+            })
+            price_div.append(price,stprice,btn);
+        
+            div1.append(img,name,price_div)
+
+            card.append(div1);
+
+
+
+    })
+    div.append(title, card );
+
+    document.getElementById("content").append(div)
+
+    
+
+    if(i==0 || i == 2 || i==6){
+        if(i==0){
+            j=0;
+        }else if(i==2){
+            j=1;
+        }else{
+            j=2;
+        }
+        imageArr[j].map((el)=>{
+            let div_image= document.createElement("div");
+            div_image.setAttribute("class","card");
+            let img = document.createElement("img");
+  
+            img.src = el.img;
+            div_image.append(img);
+            
+            document.getElementById("content").append(div_image)
+        })
+
+
+       
+    }
+}
+
+let addToCart = (el)=>{
+
+    cartArr=JSON.parse(localStorage.getItem("cartArr"))||[];
+
+    cartArr.push(el);
+    localStorage.setItem("cartArr",JSON.stringify(cartArr));
+    
+    cartsize.textContent=`${cartArr.length}`
+   
+}
+
+</script>

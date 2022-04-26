@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Join</title>
+    <link rel="stylesheet" href="/styles/login.css">
+</head>
+
+
+<body>
+
+    <div id="box1">
+        <div id="box11">
+            <img id="iimmgg" src="https://assets.lybrate.com/q_auto,f_auto//imgs/product/logos/Lybrate-Logo.png" alt="">
+        </div>
+        <div id="box12">
+            <img id="icon1" src="	https://assets.lybrate.com/q_auto,f_auto,h_28,w_28,c_fill/imgs/product/Homepage/Ask-Question.png" alt=""> <span class="a1" >Ask a Question</span> <span><img id="icon2" src="	https://assets.lybrate.com/q_auto,f_auto,h_28,w_28,c_fill/imgs/product/Homepage/Book-Appointment.png" alt=""></span> <span class="a1">Book Appointment</span> <span><img id="icon3" src="	https://assets.lybrate.com/q_auto,f_auto,h_28,w_28,c_fill/imgs/product/Homepage/Consult-Online.png" alt=""></span> <span class="a1">Consult Online</span> <span><img id="icon4" src="	https://assets.lybrate.com/q_auto,f_auto,h_28,w_28,c_fill/imgs/product/Homepage/Book-Lab-test.png" alt=""></span> <span class="a1">Book Lab Test</span> <span><button id="b1">goodkart</button></span>
+        </div>
+    </div>
+    <div class="body-container">
+        <p id="p">Welcome to Lybrate</p>
+        <div class="form-type-1">
+            <div class="loginOrRegis">
+                <div class="SigninTag" onclick="reload()">LOGIN</div>
+
+                <div class="registerTag">SIGNUP</div>
+            </div>
+
+            <div class="hr"></div>
+            <input type="email" placeholder="Email" id="emailID-1">
+            <div class="wrongEM"></div>
+            <input type="password" placeholder="Password" id="password-1">
+            <a href="" class="password-forget">Forget your password?</a>
+            <button class="signIn" onclick="Logins()">LOGIN</button>
+            
+
+        </div>
+
+        <div class="form-type-2">
+            <div class="loginOrRegis">
+                <div class="SigninTag" onclick="reload()">LOGIN</div>
+
+                <div class="registerTag">SIGNUP</div>
+            </div>
+
+            <div class="hr2"></div>
+            <input type="text" id="name" placeholder="Name">
+            <input type="number" id="number" placeholder="Phone">
+            <input type="email" placeholder="Email" id="emailID-2">
+            <input type="password" placeholder="Password" id="password-2">
+
+            <div class="termsCon"><input type="checkbox" id="accept" value="">I agree to Lybrate's <span style="color: crimson;">Terms of Use</span> and <span style="color: crimson;">Privacy Agreement</span></div>
+
+            <button class="createAcc" onclick = "Registers()">LET'S GET STARTED</button>
+            <!-- <a href="" class="password-forget">Forget your password?</a> -->
+
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script>
+
+let isLogin = false;
+
+document.querySelector(".registerTag").addEventListener('click', function() {
+    document.querySelector(".form-type-1").style.display = "none";
+    document.querySelector(".form-type-2").style.display = "flex";
+});
+
+function reload() {
+    location.href = "login.html"
+}
+
+let Register = async () => {
+    try {
+
+    let register_data = {
+
+    name : document.getElementById("name").value,
+    email: document.getElementById("emailID-2").value,
+    password : document.getElementById("password-2").value,
+    username:document.getElementById("emailID-2").value,
+    mobile : document.getElementById("number").value,
+    description:"des"
+
+    };
+    register_data = JSON.stringify(register_data)
+    console.log(' register_data', register_data);
+    let res = await fetch("https://masai-api-mocker.herokuapp.com/auth/register", {
+
+        method: 'POST',
+
+        body: register_data,
+
+        headers: {
+         "Content-Type" : "application/json",
+        },
+    });
+
+    let data = await res.json();
+    console.log(data)
+    if(data.error==false){
+        alert(data.message);
+        location.reload()
+    }else{
+        alert(data.message)
+    }
+    }
+    catch(err){
+    console.log("err:", err)
+    }
+};
+
+
+let Login = async () => {
+  try{
+    let login_data = {
+      username: document.getElementById("emailID-1").value,
+      password: document.getElementById("password-1").value,
+    };
+
+    let login_data_json = JSON.stringify(login_data);
+
+    let res = await fetch("https://masai-api-mocker.herokuapp.com/auth/login", {
+        method: 'POST',
+
+        body: login_data_json,
+
+        headers: {
+            "Content-Type": "application/json",
+        },
+    });
+
+    let data = await res.json();
+   console.log(data)
+    if(data.error==false){
+        alert("Login Succesfull");
+        
+       getUser(login_data.username, data.token);
+     
+        isLogin =true;
+        localStorage.setItem("isLogin",isLogin);
+        
+
+        let btn = document.createElement("button");
+        btn.textContent = "Go For Shopping";
+        btn.addEventListener("click",()=>{
+            window.location.href="goodkart.html"
+        })
+        btn.setAttribute("class","signIn")
+        document.querySelector(".form-type-1").append(btn)
+        
+        // location.href="goodkart.html"
+    }else{
+        alert(data.message);
+        isLogin=false;
+        localStorage.setItem("isLogin",isLogin);
+    }
+    
+
+    
+    }
+    catch(err){
+    console.log("err:", err)
+    }
+};
+
+let getUser = async (username, token) => {
+
+try{
+
+  let res = await fetch(`https://masai-api-mocker.herokuapp.com/user/${username}`,{
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${token}`,
+    },
+  });
+
+  let data = await res.json();
+  localStorage.setItem("loginData",JSON.stringify(data))
+  
+}
+catch(err){
+  console.log("err:", err);
+}
+};
+
+    
+
+
+
+function Registers(){
+    
+    let val = document.querySelector("#accept")
+
+    if(val.checked){
+       
+        Register();
+       
+    }
+    else{
+        alert("Please accept Term & Condition")
+    }
+    
+    // document.querySelector(".form-type-1").style.display = "flex";
+    // document.querySelector(".form-type-2").style.display = "none";
+}
+
+
+function Logins(){
+    
+    
+
+    let evalue = document.getElementById("emailID-1").value;
+    let pvalue = document.getElementById("password-1").value;
+
+    if(evalue == "" || pvalue == ""){
+        alert("Please Fill The Details")
+
+    }else{
+        Login();
+        
+    }
+    
+}
+
+
+</script>

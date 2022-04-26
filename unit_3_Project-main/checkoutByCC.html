@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/checkoutByCC.css">
+    <script src="https://kit.fontawesome.com/4bcb279047.js" crossorigin="anonymous"></script>
+    <title>Payment Page</title>
+</head>
+<body>
+    <span id="icon" class="fa-3x">
+        </span>
+    <div>
+        <img src="./images/cashback.png" alt="">
+    </div>
+    <div id="container">
+        <div id="leftBox">
+            <div id="back">
+                <a href="checkout.html"><div><i class="fas fa-arrow-left" id="arrowIcon"></i>Back</div></a>
+                <div>Lybrate</div>
+            </div>
+            <h2>Enter new card</h2>
+            
+        </div>
+        <div id="rightBox">
+            <div id="paymentDiv">CARDS (CREDIT/DEBIT)</div>
+            <div id="detailsDiv">
+                <div>New Card</div>
+                <input class="type" type="number" placeholder="Enter Card Number" id="card">
+                <div id="cvv">
+                    <div>Expiry</div>
+                    <div>CVV</div>
+                </div>
+                <input type="text" placeholder="MM/YY" class="cvv" id="expiry">
+                <input type="number" placeholder="Enter CVV" class="cvv" id="cvvValue">
+                <div>Name on Card</div>
+                <input class="type" type="text" placeholder="Enter name as on card" id="name">
+                <br>
+                <input id="checkbox"type="checkbox"><span id="text">Save this option securely for faster payment</span>
+                <button id="button" onclick="proceed()">PROCEED</button>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let cartarr=JSON.parse(localStorage.getItem("cartArr"))||[];
+console.log(cartarr)
+
+function proceed(){
+    let card=document.getElementById("card").value;
+    let expiry=document.getElementById("expiry").value;
+    let cvvValue=document.getElementById("cvvValue").value;
+    let name=document.getElementById("name").value;
+
+    if(card=="" || expiry==""||cvvValue==""|| name=="")
+    {
+        console.log("empty")
+    }
+    if(card!=="" && expiry!==""&&cvvValue!==""&& name!=="")
+    {
+        let div=document.getElementById("icon");
+
+        let icon=document.createElement("i")
+        icon.className="fas fa-spinner fa-spin"
+        div.append(icon)
+        function test(){
+            alert("Hurray! your order has been successfully placed.")
+            cartarr=[];
+            localStorage.setItem("cartArr",JSON.stringify(cartarr));
+            
+            window.location.href="goodkart.html"
+        }
+
+        setTimeout(test,3000)
+
+    }
+}
+
+let payablePrice=localStorage.getItem("payablePrice")
+    let id=localStorage.getItem("tid")
+    let div=document.getElementById("leftBox");
+
+    let payable=document.createElement("div");
+    payable.textContent=`Total Payable Amount ₹${payablePrice}`
+    
+    let Transaction=document.createElement("div");
+    Transaction.textContent=`Transaction id ${id}`
+    div.append(payable,Transaction)
+</script>

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sexual Wellness: Buy Sexual Wellness Products Online At Best Prices In India | Lybrate</title>
+    <link rel="icon" sizes="192*192" href="https://nu.lybcdn.com/img/push-crew/logo_192_by_192.png">
+    <link rel="stylesheet" href="/styles/categoryPages.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="/styles/slider.css">
+    <link rel="stylesheet" href="/styles/footer.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+    <div id="container">
+        <header id="header">
+
+        </header>
+        <div id="slider">
+
+        </div>
+        <div id="secondNav">
+            
+
+        </div>
+        <div id="content">
+            <!-- <div class="cardItem">
+                <div class="priceImageDiv">
+                    <img src="https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/gangakshi/updt/g_cordial_v1.png"
+                        alt="">
+                    <div>
+                        <p>Gangakshi G Cordial Vedic Syrup 200ml</p>
+                        <div class="priceDiv">
+                            <p>₹160.00</p>
+                            <p>₹200.00</p>
+                        </div>
+                    </div>
+                </div>
+                <button>Add to Cart</button>
+            </div>-->
+
+
+
+        </div>
+
+
+
+
+
+        <div id="wellnessInfo">
+
+        </div>
+
+
+
+    </div>
+    <footer class="footer" id="footer"></footer>
+</body>
+
+</html>
+<script type="module">
+
+    import {goodkartHeader,slide,responsiveSlider} from "./components/goodkartHeaderAndSlider.js"
+
+import dropDown from "./scripts/dropDown.js";
+
+import secondNav from "./components/secondNavBar.js"
+
+import wellnessInfo from "./components/wellnessInfo.js"
+
+import {displayContent, sort} from "./scripts/categoryAppendSort.js"
+// import authenticate from "./scripts/loginauhentication.js";
+// console.log(authenticate())
+import authenticate from "./scripts/loginauhentication.js";
+import footer from "./components/footer.js"
+    document.getElementById("footer").innerHTML=footer();
+var SexualWellness = [{
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/gangakshi/updt/g_cordial_v1.png",
+            name: "Gangakshi G Cordial Vedic Syrup 200ml",
+            des: "G Cordial Vedic Syrup is a herbal concoction of pure ayurvedic herbs and is strongly effective against all types of women's related problems. It is a natural and safe product that guarantees 100% results.",
+            price: 160.00,
+            strprice: 200.00,
+
+        },
+        {
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/navgrah/vigour_up_v1.png",
+            name: "NavGrah Vigor Up For Male Stamina - 30 Capsules",
+            des: "NavGrah Vigour up capsules not only provides the interim solution for males to increase vigor and stamina etc. to have an active gym time and active office life but are helpful in curing the decreased sex drive, erectile dysfunction (ED), and poor muscle strength.",
+            price: 810.00,
+            strprice: 900.00,
+
+        },
+        {
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/dnpl/happyend_v1.png",
+            name: "DNPL Happy End Syrup 200ml",
+            des: "Happy End Syrup is an ayurvedic uterine tonic specifically formulated for women that helps in treating issues like pre-menopausal complications, leucorrhoea, dysmenorrhea, PCOD, anxiety, and infertility. The syrup aids in balancing the hormones and menstrual flow.",
+            price: 144.00,
+            strprice: 180.00,
+
+        },
+        {
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2381_PD_Image1.jpg",
+            name: "Onelife Testo Fuel Testosterone Booster (60 Tablets) Pack of 2",
+            des: "Onelife Testofuel is the combination of most effective aphrodisiac herbs which helps in promoting strength, power, and vitality.",
+            price: 1198.00,
+            strprice: 2198.00,
+
+        },
+        {
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2367_PD_Image1.jpg",
+            name: "Misters Josh for Men (30 Capsules)",
+            des: "Josh for Men is a natural ayurvedic supplement that supports healthy testosterone levels, improves intimate life, improves vitality and strength, and alleviates stress.",
+            price: 749.00,
+            strprice: 799.00,
+        },
+        {
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2465_PD_Image1.jpg",
+            name: "V-Bath Intimate Hygiene Cleanser 100ml",
+            des: "V-Bath Intimate Hygiene Cleanser helps in maintaining intimate hygiene in women. V-Bath has a natural pH balance and is formulated for women’s sensitive skin.",
+            price: 151.00,
+            strprice: 175.00,
+
+        },
+        {
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/namyaa/lot2/namyaa_anartava_v2.png",
+            name: "Namyaa Anartava For Delayed & Irregular Periods 500ml",
+            des: "Namyaa ShwetKanika -For White Discharge offers to help treat the root cause of smelly white discharge while eliminating the associated unwanted smell, itching, and burning sensations. It is an ayurvedic tablet that is here to work as a long-lasting solution.",
+            price: 399.00,
+            strprice: 499.00,
+
+        },
+        {
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2458_PD_Image1.jpg",
+            name: "Vigoroyal-M (Rasayana for Men) 10 Tablets",
+            des: "Anartava Delayed and Irregular Periods Syrup is a well renowned ayurvedic formulation to treat the problems of irregular and delayed periods in women. It serves as a much-needed herbal medicine to maintain hormonal imbalance in women and enables them to get rid of gynaecological problems.",
+            price: 180.00,
+            strprice: 210.00,
+
+        },
+        {
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2459_PD_Image1.jpg",
+            name: "Vigoroyal-F (Rasayana for Women) 10 Tablets",
+            des: "Vigoroyal F – The Rasayana for women is a unique blend of rare herbs from Maharishi Ayurveda which has been formulated exclusively for women keeping in mind the needs of the female body.",
+            price: 180.00,
+            strprice: 210.00,
+
+        },
+        {
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/372_PD_Image1.jpg",
+            name: "Dr. Vaidya's New Age Ayurveda Herbo 24 Turbo - An Ayurvedic Shilajit Vitalizer for Men - 30 Capsules",
+            des: "Herbo24Turbo is an all-natural, Ayurvedic formulation that combines the healing properties of 21 herbs including Shilajit, Ashwagandha etc ,which are known to improve stamina and energy in males.",
+            price: 400.00,
+            strprice: 500.00,
+
+        },
+        {
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/addveda/stemno.jpg",
+            name: "Add Veda Stemno Capsules For Men For Strength and Stamina - 60 Capsules",
+            des: "Being 100% ayurvedic, Stemno capsules are a complete male health capsule or the perfect manpower booster. Consume these capsules and enjoy a blissful intimate life.",
+            price: 1100.00,
+            strprice: 1500.00,
+
+        },
+        {
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/gangakshi/updt/kalyani_v1.png",
+            name: "Gangakshi Kalyani (Herbal Medicine for Leucorrhea) 30 Capsules",
+            des: "Kalyani Capsules is a natural solution to all women's problems. It helps overcome all their health related issues including leucorrhoea, menstrual cramps, fungal infections, itching and irritation in genital region, decreased physical strength and stamina and other hormonal disturbances.",
+            price: 308.00,
+            strprice: 385.00,
+
+        },
+        {
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/gangakshi/updt/women_spray_v1.png",
+            name: "Gangakshi Women Care Spray 100ml",
+            des: "Do you know using regular soap or water for personal area hygiene can alter the pH of the area? This can lead to irritation and bad odour. Women Care spray helps in balancing the Ph and enhances its natural defence.",
+            price: 384.00,
+            strprice: 480.00,
+
+        },
+        {
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/gangakshi/updt/ashwashakti_v1.png",
+            name: "Gangakshi Ashwashakti Ras 500ml",
+            des: "Ashwashakti Ras is an immunity booster syrup, suitable for all age groups - all 365 days of the year. Immunasure stimulates our body’s immunity power against all common day to day infections like cough, cold and all types of viral infections due to seasonal weather changes.",
+            price: 320.00,
+            strprice: 400.00,
+
+        },
+        {
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/536_PD_Image1.jpg",
+            name: "Dr. Vaidya's New Age Ayurveda Herbo 24 Turbo (30 Capsules) Combo - Buy 2 Get 1 FREE",
+            des: "Herbo24Turbo is an all-natural, Ayurvedic formulation that combines the healing properties of 21 herbs including Shilajit, Ashwagandha etc ,which are known to improve stamina and energy in males.",
+            price: 1000.00,
+            strprice: 1500.00,
+
+        },
+        {
+            image: "https://assets.lybrate.com/q_auto,f_auto,w_125,h_125,c_pad,b_white/rio/3M_designs/Pd/PD/2547_PD_Image1.jpg",
+            name: "Ashwa Ginseng 30 Tablets",
+            des: "Pure Nutrition Ashwa Ginseng is a vegetarian product that includes potent herbs which help boost desire and prolong performance. Including natural extracts with proven effects in both males and females without any negative side effects",
+            price: 1079.00,
+            strprice: 1499.00,
+
+        }
+
+    ]
+
+
+
+
+
+
+
+
+
+
+
+let header = document.getElementById("header");
+
+header.innerHTML = goodkartHeader();
+
+dropDown();
+
+
+let sliderArr = [{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Gold-membership-web.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/Lybrate_Covid-Care_Banner_1200x250_05-05-2021.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Swan-gold-offer-web.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Herbo-Turbo_Banner_1200x250_18-11-2021.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Turmeric-Powder-1200x250.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/BCAA-1200x250.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Bio-Ortho-1200x250.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Swan-Banner_NavGrah-Vigor-Up_1200x250_20-01-2022.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Swan-Banner_NavGrah-Slim-Up_1200x250_20-01-2022.jpg"
+},
+{
+    img: "https://assets.lybrate.com/q_auto,f_auto/rio/800x800/Masala-chai-1200x250.jpg"
+},
+];
+
+let slide_div = document.getElementById("slider")
+
+slide(slide_div,sliderArr);
+
+responsiveSlider();
+
+
+
+document.getElementById("secondNav").innerHTML = secondNav("Sexual Wellness");
+
+document.getElementById("low").addEventListener("click", function(){
+    sort("low", SexualWellness,content)
+})
+
+document.getElementById("high").addEventListener("click", function(){
+    sort("high",SexualWellness,content)
+})
+
+document.getElementById("popular").addEventListener("click", function(){
+    sort("p",SexualWellness,content)
+})
+
+
+document.getElementById("wellnessInfo").innerHTML = wellnessInfo();
+
+
+
+    
+
+
+    let content = document.getElementById("content");
+
+    
+    displayContent(SexualWellness,content);
+
+    authenticate();
+    
+    
+</script>
