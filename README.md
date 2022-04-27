@@ -9,11 +9,11 @@ Lybrate.com innovative online doctor database gives you access to over 150,000 h
 <br>
 GoodKart is Lybrate’s endeavour to deliver the best of the best Health care products at your doorstep. GoodKart brings to you a vibrant mix of health products, both from reputed international brands to local Indian brands.
 
-I worked on this project during unit-4 construct week at Masai School with the help of other three team members.
+I worked on this project during unit-3 construct week at Masai School with the help of other three team members.
 
 ## Tech stack used in this project
 
-Javascript, HTML, CSS , MongoDB , Postman , Node.js
+Javascript, HTML, CSS .
 
 ## Important Links
 <a href="http://librate.netlify.app/">Netlify</a>
@@ -55,11 +55,10 @@ Checkout page with total amount of all the cart products and transaction id.
 
 ## Features
 
-- OTP based payment process.
+- Home page.
 - Address page.
 - Sorting product feature based on price and popularity.
 - Cart page/Empty cart page.
-- User get a thankyou mail after successfull payment.
 
 ## Area of Resposibility
 
